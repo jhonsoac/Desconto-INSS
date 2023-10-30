@@ -1,52 +1,38 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main()
+{
+ 
+ float salario_b , salario_liq , desc;
+    
+    printf("Digite o seu salário bruto \n");
+    scanf("%f" , &salario_b);
+    
+    
+    if (salario_b <= 1693.72){
+           
+        desc = (salario_b * 0.08);
+        salario_liq = (salario_b - desc);
+           
+        printf("Seu salário líquido é de %f" , salario_liq);}
+           
+    else if (salario_b > 1693.73 && salario_b < 2882.90){
+        desc = (salario_b * 0.09);
+        salario_liq = (salario_b - desc);
+         
+        printf("Seu salário líquido é de %f" , salario_liq);}
+         
+    else if (salario_b > 2822.91 && salario_b < 5640.80){
+        desc = (salario_b * 0.11);
+        salario_liq = (salario_b - desc);
+        printf("Seu salário líquido é de %f" , salario_liq);}
+         
+    else if (salario_b > 5640.81){
+        desc = (salario_b - 621.04);
+        salario_liq = (salario_b - desc);
+         
+        printf("Seu saslário líquido é de %f" , salario_liq);}
+         
+    return 0;
+}
